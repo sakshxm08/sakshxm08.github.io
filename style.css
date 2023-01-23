@@ -42,6 +42,17 @@
   --persian-green: #009f93ff;
   --bg-themeBtn: #bebebe;
   --bg-sidebar-fade: #0f3349; */
+
+  /* --bg-dark: rgb(101, 110, 238);
+  --bg-light: #f6f8ffff;
+  --text-dark: #0c120cff;
+  --text-light: #f6f8ffff;
+  --bg-sidebar: rgb(83, 87, 150);
+  --bg-sidebar-fade: rgb(53, 57, 120);
+  --link-selection: #c0a2ed;
+  --link-hover: #64539f;
+  --bg-themeBtn: #cbcbcb;
+  --bg-themeBtn-hover: #b2b2b2; */
 }
 * {
   margin: 0;
@@ -96,7 +107,6 @@ body {
 .sidebar .menu {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   height: 100%;
   flex-direction: column;
   transition: all 0.2s ease-in-out;
@@ -142,7 +152,6 @@ body {
   width: 100%;
   border-bottom: 0.5px solid var(--bg-themeBtn-hover);
   transition: all 0.2s ease-in-out;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,10 +195,10 @@ body {
 }
 @-webkit-keyframes expand {
   0% {
-    height: 7rem;
+    height: 10rem;
   }
   100% {
-    height: 11.4rem;
+    height: 15.2rem;
   }
 }
 /* --------------------SECTIONS--------------------- */
@@ -354,7 +363,7 @@ body {
 }
 .about div::selection {
   background-color: var(--bg-dark);
-  color: var(--bg-light);
+  color: var(--text-light);
 }
 .about .aboutMe a::selection {
   background-color: var(--link-selection);

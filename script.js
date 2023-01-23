@@ -6,7 +6,7 @@ let details = document.getElementById("details");
 let orangeButton = document.getElementById("orange");
 let blueButton = document.getElementById("blue");
 let purpleButton = document.getElementById("purple");
-let lightButton = document.getElementById("light");
+let lightVioletButton = document.getElementById("lightViolet");
 let currentTheme = document.getElementById("themeClr");
 const root = document.querySelector(":root");
 pencil.addEventListener("click", () => {
@@ -83,12 +83,17 @@ purpleButton.addEventListener("click", () => {
   currentTheme.src = "./content/purple.png";
   currentTheme.alt = "Purple";
 });
-lightButton.addEventListener("click", () => {
-  root.style.setProperty("--bg-dark", "#161b33ff");
-  root.style.setProperty("--bg-light", "#a69cacff");
-  root.style.setProperty("--text-dark", "#161b33ff");
-  root.style.setProperty("--text-light", "#f1dac4ff");
-  root.style.setProperty("--bg-sidebar", "#474973ff");
-  root.style.setProperty("--link-selection", "#dbcbd8");
-  root.style.setProperty("--link-hover", "#564787");
+lightVioletButton.addEventListener("click", () => {
+  root.style.setProperty("--bg-dark", "rgb(101, 110, 238)");
+  root.style.setProperty("--bg-light", "#f6f8ffff");
+  root.style.setProperty("--text-dark", "#0c120cff");
+  root.style.setProperty("--text-light", "#f6f8ffff");
+  root.style.setProperty("--bg-sidebar", "rgb(83, 87, 150)");
+  root.style.setProperty("--bg-sidebar-fade", "rgb(53, 57, 120)");
+  root.style.setProperty("--link-selection", "#c0a2ed");
+  root.style.setProperty("--link-hover", "#64539f");
+  root.style.setProperty("--bg-themeBtn", "#cbcbcb");
+  root.style.setProperty("--bg-themeBtn-hover", "#b2b2b2");
+  currentTheme.src = "./content/light-violet.png";
+  currentTheme.alt = "Light Violet";
 });
