@@ -8,6 +8,8 @@ let blueButton = document.getElementById("blue");
 let purpleButton = document.getElementById("purple");
 let lightVioletButton = document.getElementById("lightViolet");
 let currentTheme = document.getElementById("themeClr");
+let projectCardOnetap = document.getElementById("projectCardOnetap");
+let projectCardPortfolio = document.getElementById("projectCardPortfolio");
 const root = document.querySelector(":root");
 pencil.addEventListener("click", () => {
   details.innerHTML = `<span class="std">Class 10th</span>
@@ -54,6 +56,10 @@ blueButton.addEventListener("click", () => {
   root.style.setProperty("--bg-themeBtn-hover", "#b8b8b8");
   currentTheme.src = "./content/blue.png";
   currentTheme.alt = "Blue";
+  projectCardOnetap.style.backgroundImage =
+    "url(./content/Onetap-Mockup-Blue.png)";
+  projectCardPortfolio.style.backgroundImage =
+    "url(./content/Portfolio-Mockup-Blue.png)";
 });
 orangeButton.addEventListener("click", () => {
   root.style.setProperty("--bg-dark", "#090446ff");
@@ -68,6 +74,10 @@ orangeButton.addEventListener("click", () => {
   root.style.setProperty("--bg-themeBtn-hover", "#8a8a8a");
   currentTheme.src = "./content/orange.png";
   currentTheme.alt = "Orange";
+  projectCardOnetap.style.backgroundImage =
+    "url(./content/Onetap-Mockup-Orange.png)";
+  projectCardPortfolio.style.backgroundImage =
+    "url(./content/Portfolio-Mockup-Orange.png)";
 });
 purpleButton.addEventListener("click", () => {
   root.style.setProperty("--bg-dark", "#161b33ff");
@@ -82,6 +92,10 @@ purpleButton.addEventListener("click", () => {
   root.style.setProperty("--bg-themeBtn-hover", "#8a8a8a");
   currentTheme.src = "./content/purple.png";
   currentTheme.alt = "Purple";
+  projectCardOnetap.style.backgroundImage =
+    "url(./content/Onetap-Mockup-Purple.png)";
+  projectCardPortfolio.style.backgroundImage =
+    "url(./content/Portfolio-Mockup-Purple.png)";
 });
 lightVioletButton.addEventListener("click", () => {
   root.style.setProperty("--bg-dark", "rgb(101, 110, 238)");
@@ -96,4 +110,8 @@ lightVioletButton.addEventListener("click", () => {
   root.style.setProperty("--bg-themeBtn-hover", "#b2b2b2");
   currentTheme.src = "./content/light-violet.png";
   currentTheme.alt = "Light Violet";
+  projectCardOnetap.style.backgroundImage =
+    "url(./content/Onetap-Mockup-Light-Violet.png)";
+  projectCardPortfolio.style.backgroundImage =
+    "url(./content/Portfolio-Mockup-Light-Violet.png)";
 });
