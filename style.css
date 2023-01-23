@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poiret+One&display=swap");
+
+:root {
+  --bg-dark: #04151f;
+  --bg-light: #7cb4b8;
+  --text-dark: #04151f;
+  --text-light: #d1e8ea;
+  --bg-sidebar: #003b5d;
+  --bg-sidebar-fade: #0f3349;
+  --link-selection: #d5c5c8;
+  --link-hover: #86626e;
+  --bg-themeBtn: #d8d8d8;
+  --bg-themeBtn-hover: #b8b8b8;
+
+  /* --bg-dark: #090446ff;
+  --bg-light: #607b7dff;
+  --text-dark: #090446ff;
+  --text-light: #fcb07eff;
+  --bg-sidebar: #051923ff;
+  --bg-sidebar-fade: rgb(27, 41, 49);
+  --link-selection: rgb(133, 124, 226);
+  --link-hover: rgb(85, 189, 179);
+  --bg-themeBtn: #bebebe;
+  --bg-themeBtn-hover: #8a8a8a; */
+
+  /* --bg-dark: #161b33ff;
+  --bg-light: #a69cacff;
+  --text-dark: #161b33ff;
+  --text-light: #f1dac4ff;
+  --bg-sidebar: #474973ff;
+  --bg-sidebar-fade: rgb(49, 50, 76);
+  --link-selection: #dbcbd8;
+  --link-hover: #564787;
+  --bg-themeBtn: #bebebe;
+  --bg-themeBtn-hover: #8a8a8a; */
+
+  /* --tiffany-blue: #00b9aeff;
+  --skobeloff: #037171ff;
+  --rich-black: #03312eff;
+  --tiffany-blue-2: #02c3bdff;
+  --persian-green: #009f93ff;
+  --bg-themeBtn: #bebebe;
+  --bg-sidebar-fade: #0f3349; */
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--bg-dark);
+  overflow-x: hidden;
+}
+::selection {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+/* -------------------SCROLLBAR-------------------- */
+::-webkit-scrollbar {
+  width: 1rem;
+  background-color: var(--bg-sidebar);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-light);
+  border-left: 0.1px solid var(--bg-sidebar);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--bg-light);
+}
+/* --------------------PARENT---------------------- */
+.parent {
+  display: flex;
+}
+/* ----------------------SIDEBAR-------------------- */
+.sidebar,
+.sections {
+  height: 100vh;
+}
+.sidebar {
+  position: fixed;
+  z-index: 20;
+  width: 25%;
+  background-color: var(--bg-sidebar);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 2.6px 0px 2.7px rgba(0, 0, 0, 0.031),
+    6.6px 0px 6.9px rgba(0, 0, 0, 0.044), 13.5px 0px 14.2px rgba(0, 0, 0, 0.055),
+    27.7px 0px 29.2px rgba(0, 0, 0, 0.068), 76px 0px 80px rgba(0, 0, 0, 0.1);
+}
+.sidebar .menu {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: 100%;
+  flex-direction: column;
+  transition: all 0.2s ease-in-out;
+}
+.sidebar span {
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+.sidebar a {
+  padding: 1rem 1.8rem;
+  transition: all 0.2s ease-in-out;
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.inactive:hover {
+  background-color: var(--bg-light);
+  transform: scaleX(1.1);
+  color: var(--text-dark);
+  transform-origin: left;
+  cursor: pointer;
+}
+
+/* ---------------------THEME BUTTONS---------------- */
+.sidebar .themeButtons {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+.sidebar .themeBtn {
+  color: var(--text-dark);
+  height: 3.8rem;
+  border-radius: 0;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--bg-themeBtn);
+  border: none;
+  width: 100%;
+  border-bottom: 0.5px solid var(--bg-themeBtn-hover);
+  transition: all 0.2s ease-in-out;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar .themeBtn i {
+  transition: transform 0.2s linear;
+}
+.sidebar .themeButtons .themeBtn i {
+  color: var(--text-dark);
+  margin-left: 0.4rem;
+}
+.sidebar .themeButtons .options {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* height: 12rem; */
+  -webkit-animation: expand 0.4s;
+}
+.sidebar .themeClr {
+  width: 6rem;
+  margin: 0.8rem;
+  border: 1px solid var(--bg-dark);
+}
+
+.sidebar .themeButtons:hover .options {
+  display: flex;
+}
+.sidebar .themeButtons .themeBtn:hover {
+  background-color: var(--bg-themeBtn-hover);
+  cursor: pointer;
+}
+.sidebar .themeButtons:hover + .menu {
+  background-color: var(--bg-sidebar-fade);
+}
+.sidebar .themeButtons:hover + .menu a {
+  opacity: 0.5;
+}
+.sidebar .themeButtons:hover .themeBtn i {
+  transform: rotate(180deg);
+}
+@-webkit-keyframes expand {
+  0% {
+    height: 7rem;
+  }
+  100% {
+    height: 11.4rem;
+  }
+}
+/* --------------------SECTIONS--------------------- */
+.sections {
+  width: 75%;
+  position: absolute;
+  right: 0;
+}
+
+.sections section {
+  height: 100vh;
+}
+.sections section:nth-child(even) {
+  background-color: var(--bg-light);
+}
+.sections section > div:first-child {
+  height: calc(100vh - 137px);
+}
+/* -------------------WAVES---------------------- */
+.custom-shape-divider-bottom-1674283755 {
+  position: absolute;
+  /* bottom: 0; */
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1674283755 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 137px;
+}
+
+.custom-shape-divider-bottom-1674283755 .shape-fill {
+  fill: var(--bg-light);
+}
+.custom-shape-divider-bottom-1674284634 {
+  position: absolute;
+  /* bottom: 0; */
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1674284634 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 137px;
+}
+
+.custom-shape-divider-bottom-1674284634 .shape-fill {
+  fill: var(--bg-dark);
+}
+.wave {
+  position: absolute;
+  width: 100%;
+}
+
+/* ---------------------HOME---------------------- */
+.home {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+.home .heading,
+.home .tagline,
+.home .name {
+  color: var(--text-light);
+  font-family: "Poiret One", cursive;
+  text-align: center;
+}
+
+.home .heading {
+  font-size: 4rem;
+  font-weight: 800;
+  padding: 40px 0 20px;
+  vertical-align: middle;
+}
+.home .tagline {
+  font-size: 1.5rem;
+  font-family: "Cutive Mono", monospace;
+  /* background-color: var(--text-light);
+  color: var(--text-dark); */
+  color: var(--text-light);
+  background-color: var(--bg-sidebar);
+  padding: 0 0.5rem;
+  /* border-left: 0.6rem solid var(--text-light); */
+  /* border-right: 0.6rem solid var(--text-light); */
+}
+.flip-card {
+  background-color: transparent;
+  width: 180px;
+  height: 180px;
+  perspective: 1000px;
+  margin: 3.5rem 0 1.2rem;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-front {
+  background-color: transparent;
+  color: #7cb4b8;
+}
+.flip-card-back {
+  background-color: transparent;
+  color: white;
+  transform: rotateY(180deg);
+}
+.home .avatar {
+  border-radius: 100px;
+}
+.home .name {
+  font-size: 2.3rem;
+}
+.home .devices {
+  height: 400px;
+  position: absolute;
+  bottom: -72px;
+  z-index: -1;
+}
+/* ---------------------ABOUT SECTTION-------------------- */
+.about .heading {
+  color: var(--text-dark);
+  font-family: "Poiret One", cursive;
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: 800;
+  padding: 20px 0;
+  vertical-align: middle;
+}
+.about .aboutMe {
+  width: 80%;
+  margin: 20px auto;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+.about div::selection {
+  background-color: var(--bg-dark);
+  color: var(--bg-light);
+}
+.about .aboutMe a::selection {
+  background-color: var(--link-selection);
+  color: var(--bg-sidebar);
+}
+.about .aboutMe a {
+  color: var(--text-dark);
+  transition: all 0.1s ease-in-out;
+}
+.about .aboutMe a:hover {
+  color: var(--link-hover);
+  text-decoration: none;
+}
+
+/* -----------------------EDUCATION----------------------- */
+.education .heading {
+  color: var(--text-light);
+  font-family: "Poiret One", cursive;
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: 800;
+  padding: 20px 0;
+  vertical-align: middle;
+}
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5rem auto 1rem;
+  width: 80%;
+}
+.icon {
+  color: var(--text-light);
+  padding: 0 5px;
+  border: 1px solid var(--text-light);
+  border-radius: 100px;
+  height: 3.5rem;
+  width: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.icon:hover {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  border: 1px solid var(--bg-light);
+}
+.bar {
+  width: 12rem;
+  height: 0.2rem;
+  background-color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--text-light);
+}
+.education .label {
+  display: flex;
+  color: var(--text-light);
+  font-family: "Montserrat", sans-serif;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  font-size: 1rem;
+}
+.education .label div {
+  text-align: center;
+  margin: 0 0 2rem;
+  width: 6rem;
+}
+.education .label div:first-child {
+  text-align: left;
+}
+.education .label div:last-child {
+  text-align: right;
+  margin-right: 0.2rem;
+  width: 5.4rem;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+  color: var(--text-light);
+  font-family: "Montserrat", sans-serif;
+}
+.details .std {
+  font-size: 2.5rem;
+  padding: 20px 0 0;
+}
+.details .duration {
+  font-size: 1.5rem;
+  padding: 20px 0 0;
+}
+.details .institute {
+  font-size: 1.2rem;
+  padding: 20px 0 0;
+}
+.details .exam {
+  font-size: 1.5rem;
+}
+.details .result {
+  font-size: 2.5rem;
+  padding: 20px 0 0;
+}
+/* -----------------------PROJECTS----------------------- */
+.projects .heading {
+  color: var(--text-dark);
+  font-family: "Poiret One", cursive;
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: 800;
+  padding: 20px 0;
+  vertical-align: middle;
+}
+.projects div::selection {
+  background-color: var(--bg-dark);
+  color: var(--bg-light);
+}
+/* -----------------------CONTACT----------------------- */
+.contact .heading {
+  color: var(--text-light);
+  font-family: "Poiret One", cursive;
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: 800;
+  padding: 20px 0;
+  vertical-align: middle;
+}
+/* -----------------------SCROLLFADE----------------------- */
+.scrollFade {
+  opacity: 1;
+  pointer-events: all;
+}
+.scrollFade--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.scrollFade--visible {
+  opacity: 1;
+  pointer-events: all;
+}
+.scrollFade--animate {
+  transition: opacity 0.4s ease-in-out;
+}
