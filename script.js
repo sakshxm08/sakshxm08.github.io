@@ -85,7 +85,7 @@ purpleButton.addEventListener("click", () => {
 });
 lightVioletButton.addEventListener("click", () => {
   root.style.setProperty("--bg-dark", "rgb(101, 110, 238)");
-  root.style.setProperty("--bg-light", "#f6f8ffff");
+  root.style.setProperty("--bg-light", "rgb(216, 225, 255)");
   root.style.setProperty("--text-dark", "#0c120cff");
   root.style.setProperty("--text-light", "#f6f8ffff");
   root.style.setProperty("--bg-sidebar", "rgb(83, 87, 150)");
