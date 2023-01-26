@@ -375,6 +375,25 @@ body {
   line-height: 1.5;
   font-size: 1.2rem;
 }
+.about .resume {
+  width: fit-content;
+  margin: 2rem auto;
+}
+.about .resume button {
+  padding: 0.6rem 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  border: 1.5px solid var(--bg-dark);
+  background-color: transparent;
+  color: var(--bg-dark);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  outline: none;
+}
+.about .resume button:hover {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
 .about div::selection {
   background-color: var(--bg-dark);
   color: var(--text-light);
