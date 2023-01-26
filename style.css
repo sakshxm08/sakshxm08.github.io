@@ -561,14 +561,123 @@ body {
   opacity: 1;
 }
 /* -----------------------CONTACT----------------------- */
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .contact .heading {
   color: var(--text-light);
   font-family: "Poiret One", cursive;
   text-align: center;
   font-size: 4.5rem;
   font-weight: 800;
-  padding: 20px 0;
+  padding: 1rem 0 0.5rem;
   vertical-align: middle;
+}
+.contact div:nth-child(2) {
+  display: flex;
+
+  justify-content: space-between;
+  width: 85%;
+  margin: auto;
+}
+.contact .contactDetails {
+  padding-right: 2rem;
+  padding: 2rem 2rem 3rem 0;
+  border-right: 1px solid #a1a1a1e9;
+  margin: 7rem 0;
+  height: fit-content;
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contact .contactDetails i {
+  font-size: 1.4rem;
+}
+.contact .contactDetails span {
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  gap: 1rem;
+}
+.contact .contactDetails span a {
+  text-decoration: none;
+  color: var(--text-light);
+}
+.contact .contactForm {
+  flex-wrap: wrap;
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  /* margin: auto; */
+}
+.contact .contactForm input,
+.contact .contactForm textarea {
+  background-color: transparent;
+  color: var(--text-light);
+  padding: 10px 10px;
+  font-size: 1.2rem;
+  outline: none;
+  border: 0.1px solid #b6b6b6e9;
+  font-family: "Montserrat", sans-serif;
+}
+.contact .contactForm label,
+.contact .contactForm span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin: 1.8rem 0 0.5rem;
+}
+.contact .contactForm span {
+  font-size: 0.8rem;
+  margin: 5px 0 5px 10px;
+}
+.contact .contactForm .submit {
+  padding: 10px;
+  margin: 2rem auto;
+  background-color: transparent;
+  border: 0.5px solid var(--text-light);
+  color: var(--text-light);
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  transition: all 0.25s ease-in-out;
+  width: max(30%, 193px);
+}
+.contact .contactForm .submit:hover {
+  background-color: var(--text-light);
+  color: var(--text-dark);
+  cursor: pointer;
+}
+/* --------------------FOOTER------------------ */
+.footer {
+  border-top: 1px solid var(--text-light);
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2rem 2rem;
+}
+.footer span {
+  font-family: "Poiret One", cursive;
+  font-size: 1.4rem;
+  color: var(--text-light);
+  margin: 1rem;
+}
+.footer .socialIcon {
+  color: #c4c4c4;
+  font-size: 1.8rem;
+  margin: 0 8px;
+  transition: all 0.2s ease-in-out;
+}
+.footer .socialIcon:hover {
+  color: #a3a3a3;
 }
 /* -----------------------SCROLLFADE----------------------- */
 .scrollFade {
