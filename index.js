@@ -32,7 +32,7 @@ jee.addEventListener("click", () => {
   details.innerHTML = `<span class="std">JEE Mains & Advanced</span>
               <span class="duration">2021</span>
               
-              <span class="result"><span class="exam">JEE Mains AIR -</span> 19,637<br><span class="exam">JEE Advanced AIR -</span> 11,205</span>`;
+              <span class="result"><span class="exam">JEE Mains AIR -</span> 19,637<br><br><span class="exam">JEE Advanced AIR -</span> 11,205</span>`;
 });
 college.addEventListener("click", () => {
   details.innerHTML = `<span class="std">College</span>

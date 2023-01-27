@@ -228,9 +228,9 @@ body {
 .sections section:nth-child(even) {
   background-color: var(--bg-light);
 }
-.sections section > div:first-child {
+/* .sections section > div:first-child {
   height: calc(100vh - 137px);
-}
+} */
 /* -------------------WAVES---------------------- */
 .custom-shape-divider-bottom-1674283755 {
   position: absolute;
@@ -281,8 +281,9 @@ body {
 .home {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: space-around;
   align-items: center;
+  height: 100%;
 }
 .home .heading,
 .home .tagline,
@@ -353,12 +354,21 @@ body {
   font-size: 2.3rem;
 }
 .home .devices {
-  height: 400px;
-  position: absolute;
+  /* height: 400px; */
+  /* position: absolute; */
+  width: 70%;
+  max-width: 500px;
   bottom: -72px;
-  z-index: -1;
+  z-index: -4;
 }
 /* ---------------------ABOUT SECTTION-------------------- */
+.about {
+  justify-content: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .about .heading {
   color: var(--text-dark);
   font-family: "Poiret One", cursive;
@@ -412,6 +422,10 @@ body {
 }
 
 /* -----------------------EDUCATION----------------------- */
+.education {
+  height: 100%;
+  padding: 80px 0;
+}
 .education .heading {
   color: var(--text-light);
   font-family: "Poiret One", cursive;
@@ -507,13 +521,19 @@ body {
   padding: 20px 0 0;
 }
 /* -----------------------PROJECTS----------------------- */
+.projects {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 .projects .heading {
   color: var(--text-dark);
   font-family: "Poiret One", cursive;
   text-align: center;
   font-size: 4.5rem;
   font-weight: 800;
-  padding: 20px 0;
+  padding: 0 0 40px;
   vertical-align: middle;
 }
 .projects div::selection {
@@ -526,6 +546,9 @@ body {
   border-radius: 8px;
   margin: 1rem auto 2rem;
   background-size: contain;
+  box-shadow: 0px 0px 2.9px rgba(0, 0, 0, 0.049),
+    0px 0px 9px rgba(0, 0, 0, 0.07), 0px 0px 23.3px rgba(0, 0, 0, 0.09),
+    0px 0px 80px rgba(0, 0, 0, 0.14);
 }
 .projects #projectCardOnetap {
   background-image: url(./content/Onetap\ Mockup.png);
@@ -591,14 +614,14 @@ body {
   text-align: center;
   font-size: 4.5rem;
   font-weight: 800;
-  padding: 1rem 0 0.5rem;
+  padding: 3rem 0 1rem;
   vertical-align: middle;
 }
 .contact div:nth-child(2) {
   display: flex;
 
   justify-content: space-between;
-  width: 85%;
+  width: 95%;
   margin: auto;
 }
 .contact .contactDetails {
@@ -675,19 +698,21 @@ body {
 /* --------------------FOOTER------------------ */
 .footer {
   border-top: 1px solid var(--text-light);
-  width: 60%;
-  margin: auto;
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 1rem 2rem 2rem;
+  padding: 1rem 0 2rem;
 }
 .footer span {
   font-family: "Poiret One", cursive;
   font-size: 1.4rem;
   color: var(--text-light);
-  margin: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+  flex-wrap: nowrap;
 }
 .footer .socialIcon {
   color: #c4c4c4;
@@ -713,4 +738,94 @@ body {
 }
 .scrollFade--animate {
   transition: opacity 0.4s ease-in-out;
+}
+@media screen and (max-width: 1200px) {
+  .contact div:nth-child(2) {
+    width: 98%;
+  }
+  .contact .contactForm {
+    width: 42%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .sidebar {
+    display: none;
+  }
+  .sections {
+    width: 100%;
+    position: relative;
+  }
+  .contact div:nth-child(2) {
+    width: 93%;
+  }
+  .contact .contactForm {
+    width: 42%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .contact .contactForm {
+    width: 80%;
+    margin: auto;
+  }
+  .contact div:nth-child(2) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    /* align-items: center; */
+  }
+  .contact .contactDetails {
+    margin: 0 auto 1rem;
+    width: 80%;
+    padding: 2rem 0;
+    border-right: none;
+    border-top: 1px solid #a1a1a1e9;
+  }
+  .progress {
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 0 0 2rem;
+  }
+  .bar {
+    width: 0.2rem;
+    height: 6rem;
+  }
+  .bar i {
+    transform: rotate(90deg);
+  }
+  .education .label {
+    flex-direction: column;
+    margin: 1rem 1rem;
+    width: max-content;
+    border-right: 1px solid #a1a1a1e9;
+    padding-right: 1.5rem;
+  }
+  .education .eduMain {
+    display: flex;
+    margin-top: 5rem;
+  }
+  .education .label div:first-child {
+    text-align: center;
+  }
+
+  .education .label div:last-child {
+    margin: 0;
+    text-align: center;
+  }
+  .education .label div {
+    margin: 0;
+  }
+  .education .details {
+    padding: 1.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 14px;
+  }
+  .education .details .std,
+  .education .details .result {
+    font-size: 1.9rem;
+  }
+  .education .details .result .exam {
+    margin-top: 1rem;
+  }
 }
