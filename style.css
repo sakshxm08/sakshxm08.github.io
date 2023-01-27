@@ -775,7 +775,7 @@ body {
   .sections section {
     height: max-content;
   }
-  .home {
+  #home {
     height: 100vh;
   }
   .about {
