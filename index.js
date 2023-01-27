@@ -113,5 +113,5 @@ lightVioletButton.addEventListener("click", () => {
   projectCardOnetap.style.backgroundImage =
     "url(./content/Onetap-Mockup-Light-Violet.png)";
   projectCardPortfolio.style.backgroundImage =
-    "url(./content/Portfolio-Mockup-Light-Violet.png)";
+    "url(./content/Portfolio-Mockup-Light-Violet2.png)";
 });
