@@ -15,7 +15,11 @@ let projectCardPortfolio = document.getElementById("projectCardPortfolio");
 let hrefBtn = document.querySelectorAll(".inactive");
 const root = document.querySelector(":root");
 let meta = document.createElement("meta");
-
+window.onload = () => {
+  meta.name = "theme-color";
+  meta.content = "#04151f";
+  document.getElementsByTagName("head")[0].appendChild(meta);
+};
 pencil.addEventListener("click", () => {
   details.innerHTML = `<span class="std">Class 10th</span>
               <span class="duration">2018-19</span>
