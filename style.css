@@ -87,6 +87,30 @@ body {
 .parent {
   display: flex;
 }
+
+.parent .hide {
+  display: none;
+}
+.hamburger {
+  position: fixed;
+  top: 10px;
+  display: none;
+  left: 10px;
+  background-color: var(--bg-sidebar);
+  font-size: 2rem;
+  color: var(--text-light);
+  padding: 5px 8px 2px;
+  z-index: 100;
+}
+.cross {
+  position: absolute;
+  right: 10px;
+  padding: 5px 8px 2px;
+  top: 10px;
+  background-color: var(--bg-sidebar);
+  color: var(--text-light);
+}
+
 /* ----------------------SIDEBAR-------------------- */
 .sidebar,
 .sections {
@@ -754,7 +778,28 @@ body {
 }
 @media screen and (max-width: 1000px) {
   .sidebar {
-    display: none;
+    /* display: none; */
+    width: 100%;
+    align-items: center;
+  }
+  .sidebar span {
+    font-size: 2rem;
+  }
+  .sidebar .menu {
+    align-items: center;
+    width: 100%;
+  }
+  .sidebar .themeButtons {
+    top: 55px;
+  }
+  .sidebar .themeBtn {
+    bottom: 55px;
+  }
+  .sidebar a {
+    transform-origin: center;
+  }
+  .hamburger {
+    display: block;
   }
   .sections {
     width: 100%;

@@ -9,7 +9,10 @@ let purpleButton = document.getElementById("purple");
 let lightVioletButton = document.getElementById("lightViolet");
 let currentTheme = document.getElementById("themeClr");
 let projectCardOnetap = document.getElementById("projectCardOnetap");
+let hamburger = document.getElementById("hamburger");
+let sidebar = document.getElementById("sidebar");
 let projectCardPortfolio = document.getElementById("projectCardPortfolio");
+let hrefBtn = document.querySelectorAll(".inactive");
 const root = document.querySelector(":root");
 pencil.addEventListener("click", () => {
   details.innerHTML = `<span class="std">Class 10th</span>
@@ -115,3 +118,41 @@ lightVioletButton.addEventListener("click", () => {
   projectCardPortfolio.style.backgroundImage =
     "url(./content/Portfolio-Mockup-Light-Violet2.png)";
 });
+hamburger.addEventListener("click", () => {
+  sidebar.classList.toggle("hide");
+  hamburger.classList.toggle("hide");
+  document.getElementById("cross").classList.toggle("hide");
+});
+document.getElementById("cross").addEventListener("click", () => {
+  sidebar.classList.toggle("hide");
+  hamburger.classList.toggle("hide");
+  document.getElementById("cross").classList.toggle("hide");
+});
+if (window.matchMedia("(max-width:1000px)").matches) {
+  sidebar.classList.add("hide");
+  document.getElementById("homeBtn").addEventListener("click", () => {
+    sidebar.classList.toggle("hide");
+    hamburger.classList.toggle("hide");
+    document.getElementById("cross").classList.toggle("hide");
+  });
+  document.getElementById("aboutBtn").addEventListener("click", () => {
+    sidebar.classList.toggle("hide");
+    hamburger.classList.toggle("hide");
+    document.getElementById("cross").classList.toggle("hide");
+  });
+  document.getElementById("eduBtn").addEventListener("click", () => {
+    sidebar.classList.toggle("hide");
+    hamburger.classList.toggle("hide");
+    document.getElementById("cross").classList.toggle("hide");
+  });
+  document.getElementById("projectBtn").addEventListener("click", () => {
+    sidebar.classList.toggle("hide");
+    hamburger.classList.toggle("hide");
+    document.getElementById("cross").classList.toggle("hide");
+  });
+  document.getElementById("contactBtn").addEventListener("click", () => {
+    sidebar.classList.toggle("hide");
+    hamburger.classList.toggle("hide");
+    document.getElementById("cross").classList.toggle("hide");
+  });
+}

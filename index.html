@@ -21,7 +21,9 @@
   </head>
   <body>
     <div class="parent">
-      <div class="sidebar">
+        <span class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></span>
+      <div class="sidebar" id="sidebar"><span class="cross hide" id="cross">
+        <i class="fa-solid fa-xmark"></i></span>
         <div class="themeButtons">
           <button class="themeBtn" id="null" disabled>
             Select Your Theme<span
@@ -48,11 +50,11 @@
           </div>
         </div>
         <div class="menu">
-          <a href="#home" class="inactive"><span>Home</span></a>
-          <a href="#about" class="inactive"><span>About Me</span></a>
-          <a href="#education" class="inactive"><span>Education</span></a>
-          <a href="#projects" class="inactive"><span>Projects</span></a>
-          <a href="#contact" class="inactive"><span>Contact Me</span></a>
+          <a href="#home" class="inactive" id="homeBtn"><span>Home</span></a>
+          <a href="#about" class="inactive" id="aboutBtn"><span>About Me</span></a>
+          <a href="#education" class="inactive" id="eduBtn"><span>Education</span></a>
+          <a href="#projects" class="inactive" id="projectBtn"><span>Projects</span></a>
+          <a href="#contact" class="inactive" id="contactBtn"><span>Contact Me</span></a>
         </div>
         <div class="themeBtn" id="themeClrDiv">
           Current Theme :
