@@ -792,9 +792,6 @@ body {
   .sidebar .themeButtons {
     top: 55px;
   }
-  .sidebar .themeBtn {
-    bottom: 55px;
-  }
   .sidebar a {
     transform-origin: center;
   }

@@ -14,6 +14,8 @@ let sidebar = document.getElementById("sidebar");
 let projectCardPortfolio = document.getElementById("projectCardPortfolio");
 let hrefBtn = document.querySelectorAll(".inactive");
 const root = document.querySelector(":root");
+let meta = document.createElement("meta");
+
 pencil.addEventListener("click", () => {
   details.innerHTML = `<span class="std">Class 10th</span>
               <span class="duration">2018-19</span>
@@ -57,6 +59,10 @@ blueButton.addEventListener("click", () => {
   root.style.setProperty("--link-hover", "#86626e");
   root.style.setProperty("--bg-themeBtn", "#d8d8d8");
   root.style.setProperty("--bg-themeBtn-hover", "#b8b8b8");
+  meta.name = "theme-color";
+  meta.content = "#04151f";
+  document.getElementsByTagName("head")[0].appendChild(meta);
+
   currentTheme.src = "./content/blue.png";
   currentTheme.alt = "Blue";
   projectCardOnetap.style.backgroundImage =
@@ -75,6 +81,9 @@ orangeButton.addEventListener("click", () => {
   root.style.setProperty("--link-hover", "rgb(85, 189, 179)");
   root.style.setProperty("--bg-themeBtn", "#bebebe");
   root.style.setProperty("--bg-themeBtn-hover", "#8a8a8a");
+  meta.name = "theme-color";
+  meta.content = "#090446";
+  document.getElementsByTagName("head")[0].appendChild(meta);
   currentTheme.src = "./content/orange.png";
   currentTheme.alt = "Orange";
   projectCardOnetap.style.backgroundImage =
@@ -93,6 +102,9 @@ purpleButton.addEventListener("click", () => {
   root.style.setProperty("--link-hover", "#564787");
   root.style.setProperty("--bg-themeBtn", "#bebebe");
   root.style.setProperty("--bg-themeBtn-hover", "#8a8a8a");
+  meta.name = "theme-color";
+  meta.content = "#161b33";
+  document.getElementsByTagName("head")[0].appendChild(meta);
   currentTheme.src = "./content/purple.png";
   currentTheme.alt = "Purple";
   projectCardOnetap.style.backgroundImage =
@@ -111,6 +123,9 @@ lightVioletButton.addEventListener("click", () => {
   root.style.setProperty("--link-hover", "#64539f");
   root.style.setProperty("--bg-themeBtn", "#cbcbcb");
   root.style.setProperty("--bg-themeBtn-hover", "#b2b2b2");
+  meta.name = "theme-color";
+  meta.content = "rgb(101, 110, 238)";
+  document.getElementsByTagName("head")[0].appendChild(meta);
   currentTheme.src = "./content/light-violet.png";
   currentTheme.alt = "Light Violet";
   projectCardOnetap.style.backgroundImage =
