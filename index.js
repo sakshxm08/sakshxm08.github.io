@@ -224,8 +224,7 @@ const colorCalc = (color, div) => {
     if (i + 1 < color.length) {
       let num = parseInt(color[i], 16) * 10 + parseInt(color[i + 1], 16);
       let num2 = parseInt(num / div);
-
-      if (num2 < 10) {
+      if (num2 < 16) {
         color2 += "0";
       }
       color2 += num2.toString(16);
@@ -247,6 +246,6 @@ apply.addEventListener("click", () => {
     "#d8d8d8",
     "#b8b8b8"
   );
-  console.log(colorCalc(picker.children[3].children[0].value, 2));
+  // console.log(colorCalc(picker.children[0].children[0].value, 2));
   document.getElementById("customize").style.display = "none";
 });
