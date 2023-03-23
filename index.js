@@ -249,3 +249,7 @@ apply.addEventListener("click", () => {
   // console.log(colorCalc(picker.children[0].children[0].value, 2));
   document.getElementById("customize").style.display = "none";
 });
+let closeCustomize = document.getElementById("closeCustomize");
+closeCustomize.addEventListener("click", () => {
+  document.getElementById("customize").style.display = "none";
+});
