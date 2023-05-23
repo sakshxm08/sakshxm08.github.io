@@ -803,6 +803,9 @@ body::-webkit-scrollbar-thumb:active {
 .carousel a {
   text-decoration: none;
 }
+.carousel .carousel-item.active {
+  cursor: default;
+}
 .carousel .indicators {
   position: absolute;
   text-align: center;
@@ -872,7 +875,7 @@ body::-webkit-scrollbar-thumb:active {
 }
 .desc .title {
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 24px;
   display: flex;
   aspect-ratio: 6/1;
   align-items: center;
@@ -886,12 +889,12 @@ body::-webkit-scrollbar-thumb:active {
   justify-content: center;
   align-items: center;
   padding-top: 0;
-  font-size: 0.9rem;
+  font-size: 15px;
   text-align: center;
   gap: 20px;
 }
 .desc .project-brief button {
-  font-size: 1rem;
+  font-size: 16px;
   font-family: "Montserrat", sans-serif;
   border: 1px solid var(--text-dark);
   background-color: transparent;
@@ -900,7 +903,13 @@ body::-webkit-scrollbar-thumb:active {
   cursor: pointer;
   transition: all 0.2s;
 }
-.desc .project-brief button:hover {
+@media (hover: hover) {
+  .desc .project-brief button:hover {
+    background-color: var(--text-dark);
+    color: var(--text-light);
+  }
+}
+.desc .project-brief button:active {
   background-color: var(--text-dark);
   color: var(--text-light);
 }
