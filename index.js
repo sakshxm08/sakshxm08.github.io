@@ -50,7 +50,7 @@ college.addEventListener("click", () => {
               <span class="institute"
                 >Delhi Technological University, New Delhi</span
               >
-              <span class="result"><span class="exam">1st Year GPA -</span> 9.38</span>`;
+              <span class="result"><span class="exam">GPA -</span> 9.47</span>`;
 });
 const setTheme = (
   bgDark,
@@ -253,3 +253,12 @@ let closeCustomize = document.getElementById("closeCustomize");
 closeCustomize.addEventListener("click", () => {
   document.getElementById("customize").style.display = "none";
 });
+
+// const openBrief = (project) => {
+//   project.addEventListener("click", () => {
+//     project.style.maxHeight = "500px";
+//     project.style.transform = "translateY(-100px)";
+//     project.parentElement.style.overflow = "visible";
+//   });
+// };
+// Array.from(document.querySelectorAll(".open-project-brief")).forEach(openBrief);
