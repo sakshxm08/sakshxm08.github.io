@@ -783,7 +783,7 @@ body::-webkit-scrollbar-thumb:active {
   align-items: center;
 }
 .carousel {
-  height: 650px !important;
+  height: 650px;
   /* overflow: hidden; */
   position: relative;
   width: 100%;
@@ -856,6 +856,9 @@ body::-webkit-scrollbar-thumb:active {
   aspect-ratio: 16/9;
   border-radius: 8px 8px 0 0;
   background-color: var(--bg-sidebar);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .mockup img {
   border-radius: 8px 8px 0 0;
@@ -878,8 +881,10 @@ body::-webkit-scrollbar-thumb:active {
   font-size: 24px;
   display: flex;
   aspect-ratio: 6/1;
+  text-align: center;
   align-items: center;
-  /* height: 72px; */
+  padding: 12px 0;
+
   justify-content: center;
 }
 .desc .project-brief {
@@ -891,7 +896,7 @@ body::-webkit-scrollbar-thumb:active {
   padding-top: 0;
   font-size: 15px;
   text-align: center;
-  gap: 20px;
+  gap: 24px;
 }
 .desc .project-brief button {
   font-size: 16px;
@@ -1243,12 +1248,17 @@ body::-webkit-scrollbar-thumb:active {
     width: 80%;
   }
   .carousel {
-    width: 150%;
+    width: 170%;
     overflow: hidden;
     scale: 0.7;
+    height: 700px;
   }
   .carousel-parent {
     width: 90%;
+    overflow: hidden;
+  }
+  .project-card {
+    width: 30rem;
   }
 }
 @media screen and (max-width: 430px) {
