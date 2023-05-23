@@ -865,7 +865,7 @@ body::-webkit-scrollbar-thumb:active {
 .desc {
   width: 100%;
   border-radius: 0 0 8px 8px;
-  background: #eee;
+  background: #f9f9f9;
   position: relative;
   height: max-content;
   /* overflow: hidden; */
@@ -920,7 +920,7 @@ body::-webkit-scrollbar-thumb:active {
   gap: 14px;
 }
 .desc .project-brief .devTools img {
-  width: 74px;
+  height: 28px;
   border-radius: 10px;
 }
 
