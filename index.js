@@ -62,7 +62,8 @@ const setTheme = (
   linkSelection,
   linkHover,
   bgThemeBtn,
-  bgThemeBtnHover
+  bgThemeBtnHover,
+  textHighlight
 ) => {
   root.style.setProperty("--bg-dark", bgDark);
   root.style.setProperty("--bg-light", bgLight);
@@ -74,6 +75,7 @@ const setTheme = (
   root.style.setProperty("--link-hover", linkHover);
   root.style.setProperty("--bg-themeBtn", bgThemeBtn);
   root.style.setProperty("--bg-themeBtn-hover", bgThemeBtnHover);
+  root.style.setProperty("--text-highlight", textHighlight);
   meta.name = "theme-color";
   meta.content = bgDark;
   document.getElementsByTagName("head")[0].appendChild(meta);
@@ -89,15 +91,9 @@ blueButton.addEventListener("click", () => {
     "#d5c5c8",
     "#86626e",
     "#d8d8d8",
-    "#b8b8b8"
+    "#b8b8b8",
+    "#00828b"
   );
-
-  currentTheme.src = "./content/blue.png";
-  currentTheme.alt = "Blue";
-  projectCardOnetap.style.backgroundImage =
-    "url(./content/Onetap-Mockup-Blue.png)";
-  projectCardPortfolio.style.backgroundImage =
-    "url(./content/Portfolio-Mockup-Blue.png)";
 });
 orangeButton.addEventListener("click", () => {
   setTheme(
@@ -110,14 +106,9 @@ orangeButton.addEventListener("click", () => {
     "rgb(133, 124, 226)",
     "rgb(85, 189, 179)",
     "#bebebe",
-    "#8a8a8a"
+    "#8a8a8a",
+    "rgb(0, 146, 157)"
   );
-  currentTheme.src = "./content/orange.png";
-  currentTheme.alt = "Orange";
-  projectCardOnetap.style.backgroundImage =
-    "url(./content/Onetap-Mockup-Orange.png)";
-  projectCardPortfolio.style.backgroundImage =
-    "url(./content/Portfolio-Mockup-Orange.png)";
 });
 purpleButton.addEventListener("click", () => {
   setTheme(
@@ -130,14 +121,9 @@ purpleButton.addEventListener("click", () => {
     "#dbcbd8",
     "#564787",
     "#bebebe",
-    "#8a8a8a"
+    "#8a8a8a",
+    "rgb(138, 0, 218)"
   );
-  currentTheme.src = "./content/purple.png";
-  currentTheme.alt = "Purple";
-  projectCardOnetap.style.backgroundImage =
-    "url(./content/Onetap-Mockup-Purple.png)";
-  projectCardPortfolio.style.backgroundImage =
-    "url(./content/Portfolio-Mockup-Purple.png)";
 });
 lightVioletButton.addEventListener("click", () => {
   setTheme(
@@ -150,14 +136,9 @@ lightVioletButton.addEventListener("click", () => {
     "#c0a2ed",
     "#64539f",
     "#cbcbcb",
-    "#b2b2b2"
+    "#b2b2b2",
+    "rgb(109, 118, 235)"
   );
-  currentTheme.src = "./content/light-violet.png";
-  currentTheme.alt = "Light Violet";
-  projectCardOnetap.style.backgroundImage =
-    "url(./content/Onetap-Mockup-Light-Violet.png)";
-  projectCardPortfolio.style.backgroundImage =
-    "url(./content/Portfolio-Mockup-Light-Violet2.png)";
 });
 pickTheme.addEventListener("click", () => {
   document.getElementById("customize").style.display = "flex";
@@ -244,7 +225,8 @@ apply.addEventListener("click", () => {
     picker.children[3].children[0].value,
     colorCalc(picker.children[3].children[0].value, 2),
     "#d8d8d8",
-    "#b8b8b8"
+    "#b8b8b8",
+    colorCalc(picker.children[1].children[0].value, 2)
   );
   // console.log(colorCalc(picker.children[0].children[0].value, 2));
   document.getElementById("customize").style.display = "none";

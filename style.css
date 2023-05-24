@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poiret+One:wght@300;400;500;600&display=swap");
 
 :root {
   --bg-dark: #04151f;
@@ -12,7 +12,7 @@
   --link-hover: #86626e;
   --bg-themeBtn: #d8d8d8;
   --bg-themeBtn-hover: #b8b8b8;
-
+  --text-highlight: #00828b;
   /* .svg-sidebar, .svg-sidebar-stroke, .svg-dark-stroke, svg-dark, svg-light, svg-light-stroke, svg-light-text */
 
   /* --bg-dark: #090446ff;
@@ -448,6 +448,7 @@ body::-webkit-scrollbar-thumb:active {
 .flip-card-inner {
   position: relative;
   width: 100%;
+  aspect-ratio: 1/1;
   height: 100%;
   text-align: center;
   transition: transform 0.6s;
@@ -510,12 +511,75 @@ body::-webkit-scrollbar-thumb:active {
   padding: 20px 0;
   vertical-align: middle;
 }
+.aboutMain {
+  display: flex;
+  align-items: center;
+  /* gap: 40px; */
+  justify-content: space-around;
+}
+.aboutBrief {
+  width: 55%;
+  text-align: center;
+}
+.aboutBox {
+  background-color: #eee;
+  border-radius: 20px;
+  width: 32%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  font-family: "Montserrat", sans-serif;
+  padding: 24px;
+  text-align: center;
+}
+.aboutBox span {
+  border-radius: 100%;
+  padding: 22px;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-light);
+}
+.aboutBox h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.aboutBox .desc {
+  /* text-align: center; */
+  line-height: 1.6;
+}
+.aboutBox .lang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.aboutBox h4 {
+  font-weight: 500;
+  color: var(--text-highlight);
+  font-size: 18px;
+  margin: 12px 0;
+}
+.aboutBox .tools ul {
+  /* text-align: center; */
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
 .about .aboutMe {
   width: 80%;
   margin: 20px auto;
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  /* font-weight: 300; */
 }
 .about .resume {
   width: fit-content;
@@ -697,83 +761,6 @@ body::-webkit-scrollbar-thumb:active {
   background-color: var(--bg-dark);
   color: var(--bg-light);
 }
-/* .projects .projectGrid {
-  display: flex;
-  overflow-x: scroll;
-  width: fit-content; ----
-  padding: 24px;
-  scroll-snap-type: x mandatory;
-  scroll-padding: 24px;
-  scrollbar-width: none;
-  gap: 12px;
-}
-
-.projects .projectCard {
-  flex: 0 0 80%;
-  scroll-snap-align: start;
-  width: 25rem;
-  aspect-ratio: 16/9;
-  border-radius: 8px;
-  margin: 2rem auto;
-  background-size: contain;
-  box-shadow: 0px 0px 2.9px rgba(0, 0, 0, 0.049),
-    0px 0px 9px rgba(0, 0, 0, 0.07), 0px 0px 23.3px rgba(0, 0, 0, 0.09),
-    0px 0px 80px rgba(0, 0, 0, 0.14);
-}
-.projects #projectCardOnetap {
-  background-image: url(./content/Onetap\ Mockup.png);
-}
-.projects #projectCardPortfolio {
-  background-image: url(./content/Portfolio-Mockup-Blue.png);
-}
-.projects .projectCard .projectDetails {
-  border-radius: 8px;
-  background-color: transparent;
-  height: 100%;
-  transition: all 0.2s ease-in-out;
-}
-.projects .projectCard .details {
-  transition: all 0.2s ease-in-out;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-}
-.projects .projectCard .details .title {
-  font-size: 2.9rem;
-  font-family: "Poiret One", cursive;
-  font-weight: bold;
-  padding: 1.5rem 0 1rem;
-}
-.projects .projectCard .details .caption {
-  font-size: 1.3rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  padding: 0rem 0 1.5rem;
-}
-.projects .projectCard .details .site {
-  font-size: 1.3rem;
-  font-family: "Montserrat", sans-serif;
-  border: 1px solid var(--text-light);
-  background-color: transparent;
-  color: var(--text-light);
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-.projects .projectCard .details .site:hover {
-  background-color: var(--text-light);
-  color: var(--text-dark);
-}
-.projects .projectCard:hover .projectDetails {
-  background-color: var(--bg-sidebar-fade);
-}
-.projects .projectCard:hover .details {
-  opacity: 1;
-} */
-
 .carousel-parent {
   position: relative;
   display: flex;
@@ -865,7 +852,7 @@ body::-webkit-scrollbar-thumb:active {
   width: 100%;
   height: auto;
 }
-.desc {
+.carousel .desc {
   width: 100%;
   border-radius: 0 0 8px 8px;
   background: #f9f9f9;
@@ -876,7 +863,7 @@ body::-webkit-scrollbar-thumb:active {
   /* max-height: 75px; */
   font-family: "Montserrat", sans-serif;
 }
-.desc .title {
+.carousel .desc .title {
   width: 100%;
   font-size: 24px;
   display: flex;
@@ -887,7 +874,7 @@ body::-webkit-scrollbar-thumb:active {
 
   justify-content: center;
 }
-.desc .project-brief {
+.carousel .desc .project-brief {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -898,7 +885,7 @@ body::-webkit-scrollbar-thumb:active {
   text-align: center;
   gap: 24px;
 }
-.desc .project-brief button {
+.carousel .desc .project-brief button {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   border: 1px solid var(--text-dark);
@@ -909,22 +896,22 @@ body::-webkit-scrollbar-thumb:active {
   transition: all 0.2s;
 }
 @media (hover: hover) {
-  .desc .project-brief button:hover {
+  .carousel .desc .project-brief button:hover {
     background-color: var(--text-dark);
     color: var(--text-light);
   }
 }
-.desc .project-brief button:active {
+.carousel .desc .project-brief button:active {
   background-color: var(--text-dark);
   color: var(--text-light);
 }
-.desc .devTools {
+.carousel .desc .devTools {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 14px;
 }
-.desc .project-brief .devTools img {
+.carousel .desc .project-brief .devTools img {
   height: 28px;
   border-radius: 10px;
 }
@@ -1162,6 +1149,13 @@ body::-webkit-scrollbar-thumb:active {
     justify-content: center;
     /* align-items: center; */
   }
+
+  .aboutBrief {
+    width: 52%;
+  }
+  .aboutBox {
+    width: 35%;
+  }
   .contact .contactDetails {
     margin: 0 auto 1rem;
     width: 80%;
@@ -1213,9 +1207,19 @@ body::-webkit-scrollbar-thumb:active {
     scale: 0.8;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .carousel {
     scale: 0.7;
+  }
+  .aboutMain {
+    flex-direction: column;
+  }
+  .aboutBrief {
+    width: 100%;
+  }
+  .aboutBox {
+    width: 50%;
+    padding: 40px 24px;
   }
 }
 @media screen and (max-width: 630px) {
@@ -1259,6 +1263,9 @@ body::-webkit-scrollbar-thumb:active {
   }
   .project-card {
     width: 30rem;
+  }
+  .aboutBox {
+    width: 70%;
   }
 }
 @media screen and (max-width: 430px) {
