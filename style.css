@@ -549,7 +549,6 @@ body::-webkit-scrollbar-thumb:active {
   font-size: 1.5rem;
 }
 .aboutBox .desc {
-  font-size: 1.2rem;
   line-height: 1.6;
 }
 .aboutBox .lang {
@@ -558,9 +557,7 @@ body::-webkit-scrollbar-thumb:active {
   align-items: center;
   flex-direction: column;
 }
-.aboutBox .lang div {
-  font-size: 1.2rem;
-}
+
 .aboutBox h4 {
   font-weight: 500;
   color: var(--text-highlight);
@@ -575,14 +572,13 @@ body::-webkit-scrollbar-thumb:active {
   align-items: center;
   flex-direction: column;
   gap: 8px;
-  font-size: 1.2rem;
 }
 .about .aboutMe {
   width: 80%;
   margin: 20px auto;
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   /* font-weight: 300; */
 }
 .about .resume {
@@ -1270,6 +1266,12 @@ body::-webkit-scrollbar-thumb:active {
   }
   .aboutBox {
     width: 70%;
+  }
+  .aboutBox .lang div,
+  .aboutBox ul,
+  .about .aboutMe,
+  .aboutBox .desc {
+    font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 430px) {
