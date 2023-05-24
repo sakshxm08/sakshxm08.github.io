@@ -698,7 +698,6 @@ body::-webkit-scrollbar-thumb:active {
   justify-content: space-between;
   align-items: center;
   margin: auto;
-  font-size: 1.2rem;
 }
 .education .label div {
   text-align: center;
@@ -1270,7 +1269,8 @@ body::-webkit-scrollbar-thumb:active {
   .aboutBox .lang div,
   .aboutBox ul,
   .about .aboutMe,
-  .aboutBox .desc {
+  .aboutBox .desc,
+  .education .label {
     font-size: 1.2rem;
   }
 }
