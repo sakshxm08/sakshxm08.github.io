@@ -792,6 +792,14 @@ body::-webkit-scrollbar-thumb:active {
 .carousel .carousel-item.active {
   cursor: default;
 }
+.carousel > :not(a.active) {
+  transition: opacity 0.2s;
+}
+@media (hover: hover) {
+  .carousel > :not(a.active):hover {
+    opacity: 0.7 !important;
+  }
+}
 .carousel .indicators {
   position: absolute;
   text-align: center;
