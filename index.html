@@ -116,6 +116,7 @@
           <button id="applyTheme">Apply theme</button>
         </div>
       </div>
+
       <div class="sections">
         <section class="panel" id="home">
           <div class="home scrollFade">
@@ -127,9 +128,9 @@
               <div class="flip-card-inner">
                 <div class="flip-card-front">
                   <img
-                    src="./content/hooman2-removebg.png"
+                    src="./content/my-avatar-closeup.png"
                     width="180px"
-                    class="avatar"
+                    class="avatarImg"
                     alt=""
                   />
                 </div>
@@ -137,7 +138,7 @@
                   <img
                     src="./content/devImg.png"
                     width="180px"
-                    class="avatar"
+                    class="avatarImg"
                     alt=""
                   />
                 </div>
@@ -939,8 +940,8 @@
             <div class="heading">Projects</div>
 
             <div class="carousel-parent">
-              <div class="carousel">
-                <a
+              <div class="carousel" id="carousel">
+                <!-- <a
                   class="carousel-item"
                   style="width: fit-content; height: fit-content"
                   href="#one"
@@ -1091,7 +1092,7 @@
                       </div>
                     </div>
                   </div></a
-                >
+                > -->
               </div>
             </div>
           </div>
@@ -1149,27 +1150,27 @@
         </section>
       </div>
     </div>
-  </body>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
-    integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <script type="text/javascript">
-    $("document").ready(() => {
-      $(".carousel").carousel({
-        indicators: true,
+    <script src="./scrollfade-0.1.js"></script>
+    <script src="./index.js"></script>
+    <script src="./firebase.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+      integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="text/javascript">
+      $("document").ready(() => {
+        $(".carousel").carousel({
+          indicators: true,
+        });
       });
-    });
-  </script>
-  <script src="./scrollfade-0.1.js"></script>
-  <script src="./index.js"></script>
-  <script src="./firebase.js"></script>
+    </script>
+  </body>
 </html>
