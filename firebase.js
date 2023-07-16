@@ -57,11 +57,34 @@ function saveMessage(name, email, message) {
 //   document.getElementsByTagName("body")[0].appendChild(carouselScript);
 // };
 
+const techLinks = {
+  html: "https://img.shields.io/badge/HTML-%23E34F26?style=for-the-badge&logo=html5&logoColor=white",
+  css: "https://img.shields.io/badge/CSS-%231572B6?style=for-the-badge&logo=css3&logoColor=white",
+  js: "https://img.shields.io/badge/javascript-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
+  tailwind:
+    "https://img.shields.io/badge/tailwind%20CSS-%2306B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white",
+  react:
+    "https://img.shields.io/badge/react-black?style=for-the-badge&logo=react&logoColor=%2361DAFB",
+  gsap: "https://img.shields.io/badge/greensock%20gsap-%2388CE02?style=for-the-badge&logo=greensock&logoColor=white",
+  firebase:
+    "https://img.shields.io/badge/firebase-black?style=for-the-badge&logo=firebase&logoColor=%23FFCA28",
+  github:
+    "https://img.shields.io/badge/github-%23181717?style=for-the-badge&logo=github&logoColor=white",
+};
 const traverse = async (projects) => {
   let carousel = document.getElementById("carousel");
 
   carousel.innerHTML = "";
   for (let project of projects) {
+    let techDiv = "";
+    for (tech of project.techStack) {
+      for (let techLink in techLinks) {
+        if (techLink == tech) {
+          techDiv += `<span><img src=${techLinks[techLink]}></span>`;
+        }
+      }
+      console.log(techDiv);
+    }
     // console.log(projects[project].name);
     carousel.innerHTML += ` <a
     class="carousel-item"
@@ -82,19 +105,19 @@ const traverse = async (projects) => {
           ${project.desc}
           </div>
           <div class="devTools">
-            <span
-              ><img src="./content/react.png" alt="React"
-            /></span>
-            <span
-              ><img src="./content/firebase.png"
-              alt=Firebase"></span
-            >
+            ${techDiv}
           </div>
+          <div class="buttons">
           <button
             onclick="window.open('${project.url}')"
           >
             Visit Site
           </button>
+          <button
+            onclick="window.open('${project.repo}')"
+          >
+            View Repository
+          </button></div>
         </div>
       </div>
     </div></a
@@ -108,6 +131,8 @@ const projects = [
     name: "WearWorx",
     url: "https://wearworx.netlify.app",
     desc: "Seamless ecommerce with React, Tailwind CSS, Firebase. Google, GitHub login, user-friendly cart, favorites.",
+    techStack: ["react", "tailwind", "firebase"],
+    repo: "https://github.com/sakshxm08/wearworx",
   },
   {
     href: "two",
@@ -115,6 +140,8 @@ const projects = [
     name: "GitFolio",
     url: "https://gitfolio-sakshxm08.netlify.app",
     desc: "This project lets you explore Github profiles. It uses HTML, TailwindCSS, and JavaScript, ensuring a user-friendly experience.",
+    techStack: ["tailwind", "js", "github"],
+    repo: "https://github.com/sakshxm08/gitfolio",
   },
   {
     href: "three",
@@ -122,6 +149,8 @@ const projects = [
     name: "OneTap",
     url: "https://onetap-sakshxm08.netlify.app",
     desc: "This website provides information about banquet halls, auditoriums, gym, swimming pool etc. in one tap.",
+    techStack: ["react", "firebase"],
+    repo: "https://github.com/sakshxm08/onetap-final",
   },
   {
     href: "four",
@@ -129,6 +158,8 @@ const projects = [
     name: "Payment Page",
     url: "https://payment-page-sakshxm08.netlify.app/",
     desc: "This website is an interative design for a payment portal of a website with CSS animations like flipping of card.",
+    techStack: ["html", "css", "js"],
+    repo: "https://github.com/sakshxm08/payment-page",
   },
   {
     href: "five",
@@ -136,6 +167,8 @@ const projects = [
     name: "Animated Website Template",
     url: "https://thefrontendeer-business-temp-02.netlify.app/",
     desc: "This is a single page animated website template of a b usiness website to present my skills of HTML, CSS and GSAP",
+    techStack: ["html", "css", "gsap"],
+    repo: "https://github.com/thefrontendeer/templates/tree/main/business/02",
   },
 ];
 traverse(projects);
